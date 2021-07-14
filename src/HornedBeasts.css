@@ -1,7 +1,31 @@
-img {
-  height: 500px;
-  width: 500px;
-  border: 5px solid black;
+.hornedBeats{
+  /* border: solid white; */
+  margin: 10px;
+}
+.hornedBeats img {
+  height: 600px;
+  width: 600px;
+  border: 5px solid white;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+
+.hornedBeats h2, p {
+  color: white;
+  border: solid white;
+  max-width: fit-content;
+  margin: auto;
+  padding: 10px;
+}
+
+.hornedBeats h2 {
+  margin-top: 20px;
+}
+
+.hornedBeats p {
+  margin-bottom: 10px;
 }
 
 
