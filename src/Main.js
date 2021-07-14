@@ -30,7 +30,7 @@ class Main extends React.Component {
   
   render () {
     return (
-      <>
+      <main>
       <HornedBeats  
         title= {hornedBeastsData[0].title}
         imageUrl= {hornedBeastsData[0].image_url}
@@ -43,7 +43,7 @@ class Main extends React.Component {
          title= {hornedBeastsData[2].title}
          imageUrl= {hornedBeastsData[2].image_url}
          description={hornedBeastsData[2].description}/>
-      </>
+      </main>
     )
   }
 }
