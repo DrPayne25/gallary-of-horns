@@ -4,7 +4,7 @@ import "./HornedBeasts.css"
 class HornedBeats extends React.Component {
   render () {
     return ( 
-      <article>
+      <article className='hornedBeats'>
       <h2>{this.props.title}</h2>
       <img
       src = {this.props.imageUrl}
