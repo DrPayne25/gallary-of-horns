@@ -35,11 +35,11 @@ Number and name of feature: Feature #3 Bootstrap
 
 Estimate of time needed to complete: 30min
 
-Start time: _____
+Start time: 7:12pm
 
-Finish time: _____
+Finish time: 8:56pm
 
-Actual time needed to complete: _____
+Actual time needed to complete: 1hr 40min
 
 ### Links and Resources
 * [submission PR](http://xyz.com)

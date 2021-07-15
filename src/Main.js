@@ -1,6 +1,7 @@
 import React from 'react'
 import HornedBeats from './HornedBeasts';
 import data from "./data.json"
+import CardColumns from 'react-bootstrap/CardColumns'
 
 
 class Main extends React.Component {
@@ -18,18 +19,15 @@ class Main extends React.Component {
       })
 
     return (
-      <main>
+      <CardColumns>
         {beastToRender}
-      </main>
+      </CardColumns>
 
     )
   }
 }
 
 export default Main;
-
-
-
 
 
 
