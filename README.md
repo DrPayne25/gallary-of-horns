@@ -17,15 +17,15 @@ Estimate of time needed to complete: 30min
 
 Start time: 8:41pm
 
-Finish time: _____
+Finish time: 9:45pm
 
-Actual time needed to complete: 
+Actual time needed to complete: 1hr 4min
 
 Number and name of feature: Feature #2 Allow users to vote for their favorite beasts
 
 Estimate of time needed to complete: 30min
 
-Start time: _____
+Start time: 5:50pm
 
 Finish time: _____
 
