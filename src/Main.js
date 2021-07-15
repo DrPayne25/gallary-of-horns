@@ -14,6 +14,7 @@ class Main extends React.Component {
         title={beastComponent.title}
         imageUrl= {beastComponent.image_url}
         description={beastComponent.description}
+        horns={beastComponent.horns}
         />
         beastToRender.push(beast);
       })
