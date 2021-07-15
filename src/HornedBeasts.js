@@ -1,5 +1,6 @@
 import React from 'react'
 import "./HornedBeasts.css"
+import Button from 'react-bootstrap/Button';
 
 class HornedBeats extends React.Component {
 
@@ -35,7 +36,7 @@ class HornedBeats extends React.Component {
       onClick={this.favoriteIcon}
       />
       <p>{this.props.description}</p>
-      <p>{this.state.timesFavorited} Favorite {this.state.showFavorite ? '💘' : ''}</p>
+      <p>{this.state.timesFavorited ? this.state.timesFavorited : '0'} Favorite {this.state.showFavorite ? '💘' : ''}</p>
       <button onClick={this.favorite}>Favorite</button>
       <button onClick={this.unFavorite}>Un-Favorite</button>
       </article>

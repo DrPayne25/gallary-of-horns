@@ -5,21 +5,32 @@ import data from "./data.json"
 
 class Main extends React.Component {
   render () { 
+    let beastToRender = [];
+
+    data.forEach((beastComponent,idx) => {
+      let beast = <HornedBeats
+        key={idx}
+        title={beastComponent.title}
+        imageUrl= {beastComponent.image_url}
+        description={beastComponent.description}
+        />
+        beastToRender.push(beast);
+      })
+
     return (
       <main>
-        {data.map((beast, idx) => {
-         return <HornedBeats
-         key={idx}
-         title= {beast.title}
-         imageUrl= {beast.image_url}
-         description={beast.description}/> 
-        })}
+        {beastToRender}
       </main>
+
     )
   }
 }
 
 export default Main;
+
+
+
+
 
 
 
