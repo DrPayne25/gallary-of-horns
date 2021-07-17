@@ -17,24 +17,26 @@ class HornedBeats extends React.Component {
     this.setState({
       timesFavorited: this.state.timesFavorited + 1,
       showFavorite: true,
-    })
+    });
+    this.props.subtractWalletProperty();
   }
 
   unFavorite = () => {
     this.setState({
       timesFavorited: this.state.timesFavorited - 1,
       showFavorite: false,
-    })
+    });
+    this.props.addWalletProperty();
   }
 
   render () {
     return ( 
       <Card>
+        <h2 onClick={this.props.buttonShowModal}>About this Beast</h2>
         <Card.Img 
-          variant="bottom"       
+          variant="top"       
           src = {this.props.imageUrl}
-          alt={this.props.description}
-          onClick={this.favoriteIcon} />
+          alt={this.props.description}/>
         <Card.Body>
           <Card.Title>{this.props.title}</Card.Title>
           <Card.Text>{this.props.description}</Card.Text>
