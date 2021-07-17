@@ -4,11 +4,14 @@ import Modal from 'react-bootstrap/Modal'
 class SelectedBeast extends React.Component{
   render() {
     return (
-      <Modal show={this.state.showModal} onHide={this.buttonCloseModal}>
+      <Modal show={this.props.showModal2} onHide={this.props.buttonCloseModal}>
         <Modal.Header closeButton>
-          <Modal.Title>Title</Modal.Title>
+          <Modal.Title>{this.props.title}</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Body</Modal.Body>
+        <img
+        src= {this.props.imageUrl}
+        alt= {this.props.description} />
+        <Modal.Body>{this.props.description}</Modal.Body>
       </Modal>
     )
   }

@@ -32,6 +32,7 @@ class Main extends React.Component {
     {this.props.data.map((beast, idx) => (
       <HornedBeats
       buttonShowModal={this.props.buttonShowModal}
+      setSelectedBeast= {this.props.setSelectedBeast} 
       subtractWalletProperty={this.subtractWallet}
       addWalletProperty={this.addWallet}
       key={idx}

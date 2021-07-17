@@ -21,6 +21,10 @@ class HornedBeats extends React.Component {
     this.props.subtractWalletProperty();
   }
 
+  setSelectedBeastHorned = () => {
+    this.props.setSelectedBeast(this.props.title, this.props.description, this.props.imageUrl)
+  }
+
   unFavorite = () => {
     this.setState({
       timesFavorited: this.state.timesFavorited - 1,
@@ -32,17 +36,18 @@ class HornedBeats extends React.Component {
   render () {
     return ( 
       <Card>
-        <h2 onClick={this.props.buttonShowModal}>About this Beast</h2>
         <Card.Img 
           variant="top"       
           src = {this.props.imageUrl}
-          alt={this.props.description}/>
+          alt={this.props.description}
+          onClick={this.props.buttonShowModal}/>
         <Card.Body>
           <Card.Title>{this.props.title}</Card.Title>
           <Card.Text>{this.props.description}</Card.Text>
           <p>{this.props.horns} Horns</p>
           <p id="favorite">{this.state.timesFavorited ? this.state.timesFavorited : '0'} Favorite {this.state.showFavorite ? '💘' : ''}</p>
           <Button variant="outline-primary" onClick={this.favorite}>Favorite</Button>
+          <Button variant="outline-primary" onClick={this.setSelectedBeastHorned}>Favorite</Button>
           <Button variant="outline-danger" onClick={this.unFavorite}>Un-Favorite</Button>
         </Card.Body>
       </Card>
