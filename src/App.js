@@ -67,24 +67,3 @@ class App extends React.Component {
 
 export default App;
 
-      // <Modal show={this.state.showModal} onHide={this.buttonCloseModal}>
-      //   <Modal.Header closeButton>
-      //     <Modal.Title>{data[0].title}</Modal.Title>
-      //   </Modal.Header>
-      //   <img
-      //   src= {data[0].image_url}
-      //   alt= {data[0].description} />
-      //   <Modal.Body>{data[0].description}
-      //   </Modal.Body>
-      // </Modal>
-
-      //       <Modal show={this.state.showModal} onHide={this.buttonCloseModal}>
-      //   <Modal.Header closeButton>
-      //     <Modal.Title>{data[0].title}</Modal.Title>
-      //   </Modal.Header>
-      //   <img
-      //   src= {data[0].image_url}
-      //   alt= {data[0].description} />
-      //   <Modal.Body>{data[0].description}
-      //   </Modal.Body>
-      // </Modal>

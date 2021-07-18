@@ -18,32 +18,3 @@ class SelectedBeast extends React.Component{
 }
 
 export default SelectedBeast;
-
-// constructor(props){
-//   super(props);
-//   this.state = {
-//     showModal: false,
-//   }
-// }
-
-// buttonShowModal = () => {
-//   this.setState({
-//     showModal: true,
-//   })
-// }
-
-// buttonCloseModal = () => {
-//   this.setState({
-//     showModal: false,
-//     selectedBeast: {},
-//   })
-// }
-
-// <Modal show={this.state.showModal} onHide={this.buttonCloseModal}>
-// <Modal.Header closeButton>
-//   <Modal.Title>This is my Modal</Modal.Title>
-// </Modal.Header>
-// <Modal.Body>Modal Body</Modal.Body>
-// </Modal>
-// <Main 
-// data= {data} buttonShowModal={this.buttonShowModal}/>
