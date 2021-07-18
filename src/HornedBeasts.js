@@ -40,14 +40,14 @@ class HornedBeats extends React.Component {
           variant="top"       
           src = {this.props.imageUrl}
           alt={this.props.description}
-          onClick={this.props.buttonShowModal}/>
+          onClick={this.setSelectedBeastHorned}/>
         <Card.Body>
           <Card.Title>{this.props.title}</Card.Title>
           <Card.Text>{this.props.description}</Card.Text>
           <p>{this.props.horns} Horns</p>
           <p id="favorite">{this.state.timesFavorited ? this.state.timesFavorited : '0'} Favorite {this.state.showFavorite ? '💘' : ''}</p>
           <Button variant="outline-primary" onClick={this.favorite}>Favorite</Button>
-          <Button variant="outline-primary" onClick={this.setSelectedBeastHorned}>Favorite</Button>
+          <Button variant="outline-primary" onClick={this.setSelectedBeastHorned}>About this Beast</Button>
           <Button variant="outline-danger" onClick={this.unFavorite}>Un-Favorite</Button>
         </Card.Body>
       </Card>

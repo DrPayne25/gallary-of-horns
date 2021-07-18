@@ -1,7 +1,6 @@
 import React from 'react'
 import HornedBeats from './HornedBeasts';
 import CardColumns from 'react-bootstrap/CardColumns'
-import SelectedBeast from './SelectedBeast';
 
 
 class Main extends React.Component {
@@ -9,7 +8,7 @@ class Main extends React.Component {
     super(props);
     this.state = {
       wallet: 200,
-      showModal: false
+      // showModal: false
     }
   }
 

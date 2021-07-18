@@ -36,7 +36,7 @@ class App extends React.Component {
   setSelectedBeast = (title, description, imageUrl) => {
     this.buttonShowModal();
     this.setState({
-      // showModal: txrue,
+      showModal: true,
       selectedBeast: {
         title: title,
         description: description,
@@ -49,7 +49,6 @@ class App extends React.Component {
     return(
       <>
       <Header />
-      <h2 onClick={this.buttonShowModal}> Modal Test</h2>
       <SelectedBeast 
       buttonShowModal={this.buttonShowModal} 
       buttonCloseModal={this.buttonCloseModal} 
