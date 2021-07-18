@@ -8,7 +8,6 @@ class Main extends React.Component {
     super(props);
     this.state = {
       wallet: 200,
-      // showModal: false
     }
   }
 
