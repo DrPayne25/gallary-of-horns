@@ -6,7 +6,6 @@ import Main from './Main'
 import data from "./data.json"
 import './App.css';
 import SelectedBeast from './SelectedBeast';
-import Modal from 'react-bootstrap/Modal'
 
 class App extends React.Component {
   constructor(props){
