@@ -1,29 +1,51 @@
 import React from 'react'
 import HornedBeats from './HornedBeasts';
-import data from "./data.json"
 import CardColumns from 'react-bootstrap/CardColumns'
 
 
 class Main extends React.Component {
-  render () { 
-    let beastToRender = [];
+  constructor(props) {
+    super(props);
+    this.state = {
+      wallet: 200,
+      // showModal: false
+    }
+  }
 
-    data.forEach((beastComponent,idx) => {
-      let beast = <HornedBeats
-        key={idx}
-        title={beastComponent.title}
-        imageUrl= {beastComponent.image_url}
-        description={beastComponent.description}
-        horns={beastComponent.horns}
-        />
-        beastToRender.push(beast);
-      })
+  subtractWallet = () => {
+    this.setState({
+      wallet: this.state.wallet - 10,
+    })
+  }
 
-    return (
-      <CardColumns>
-        {beastToRender}
+  addWallet = () => {
+    this.setState({
+      wallet: this.state.wallet + 10,
+    })
+  }
+
+  render () {
+
+    let beastsToRender = 
+    <CardColumns>
+    {this.props.data.map((beast, idx) => (
+      <HornedBeats
+      buttonShowModal={this.props.buttonShowModal}
+      setSelectedBeast= {this.props.setSelectedBeast} 
+      subtractWalletProperty={this.subtractWallet}
+      addWalletProperty={this.addWallet}
+      key={idx}
+      title= {beast.title}
+      imageUrl= {beast.image_url}
+      description={beast.description}/> 
+      ))}
       </CardColumns>
 
+    return(
+      <main>
+        <h3>Wallet Balance: ${this.state.wallet}</h3>
+        {beastsToRender}
+      </main>
     )
   }
 }
