@@ -7,6 +7,9 @@ Build a site that will display images to a user that will then allow them to sor
 
 ### Collabs
 - 301n22
+- Charlie F 
+- Quentin Y 
+- 
 
 # Lab: 02 Gallery of Horns
 Update to show gallery from a json file allow users to sort favorites using bootstrap
