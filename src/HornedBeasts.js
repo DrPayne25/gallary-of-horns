@@ -47,7 +47,7 @@ class HornedBeats extends React.Component {
           <p>{this.props.horns} Horns</p>
           <p id="favorite">{this.state.timesFavorited ? this.state.timesFavorited : '0'} Favorite {this.state.showFavorite ? '💘' : ''}</p>
           <Button variant="outline-primary" onClick={this.favorite}>Favorite</Button>
-          <Button variant="outline-primary" onClick={this.setSelectedBeastHorned}>About this Beast</Button>
+          <Button variant="outline-success" onClick={this.setSelectedBeastHorned}>About this Beast</Button>
           <Button variant="outline-danger" onClick={this.unFavorite}>Un-Favorite</Button>
         </Card.Body>
       </Card>

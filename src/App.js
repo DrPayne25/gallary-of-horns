@@ -48,8 +48,7 @@ class App extends React.Component {
     return(
       <>
       <Header />
-      <SelectedBeast 
-      buttonShowModal={this.buttonShowModal} 
+      <SelectedBeast  
       buttonCloseModal={this.buttonCloseModal} 
       showModal2={this.state.showModal} 
       imageUrl={this.state.selectedBeast.imageUrl} 
@@ -57,7 +56,9 @@ class App extends React.Component {
       title= {this.state.selectedBeast.title}/>
       <Main 
       data= {data} 
-      buttonShowModal={this.buttonShowModal} buttonCloseModal={this.buttonCloseModal} showModal2={this.state.showModal} setSelectedBeast={this.setSelectedBeast}/>
+      buttonShowModal={this.buttonShowModal} 
+      showModal2={this.state.showModal} 
+      setSelectedBeast={this.setSelectedBeast}/>
       <Footer />
       </>
     )

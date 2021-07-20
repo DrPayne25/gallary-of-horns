@@ -7,22 +7,6 @@
   margin: 10px;
 }
 
-.card h2, p {
-  color: black;
-  max-width: fit-content;
-  margin: auto;
-  padding: 10px;
-}
-
-.card h2 {
-  margin-top: 20px;
-}
-
-.favorite {
-  border: solid black;
-
-}
-
 .card button {
   margin: 10px;
 }
