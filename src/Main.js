@@ -6,7 +6,7 @@ import Form from 'react-bootstrap/Form'
 
 
 class Main extends React.Component {
-  constructor(props) {
+  constructor(props) { //Sets the state for wallet and horns 
     super(props);
     this.state = {
       wallet: 200,
@@ -14,30 +14,42 @@ class Main extends React.Component {
     }
   }
 
-  handleSubmit = e => {
+  handleSubmit = e => {  //Handles the select on the 
     e.preventDefault();
     this.setState ({
-      horns:e.target.value,
+      horns: parseInt(e.target.value),
     })
     console.log(e.target.value);
   }
 
-  subtractWallet = () => {
+  subtractWallet = () => { //Changes the state of the wallet by -10
     this.setState({
       wallet: this.state.wallet - 10,
     })
   }
 
-  addWallet = () => {
+  addWallet = () => { //Changes the state of the wallet by +10
     this.setState({
       wallet: this.state.wallet + 10,
     })
   }
 
-  render () {
-    let beastsToRender = 
-    <CardColumns>
-    {this.props.data.map((beast, idx) => (
+  renderBeast() {  //filters through the this.props.data based on the horns selected 
+    if (this.state.horns === 0) {
+      return this.props.data.map((beast, idx) => (
+        <HornedBeats
+        buttonShowModal={this.props.buttonShowModal}
+        setSelectedBeast= {this.props.setSelectedBeast} 
+        subtractWalletProperty={this.subtractWallet}
+        addWalletProperty={this.addWallet}
+        horns={beast.horns}
+        key={idx}
+        beast={beast}
+        /> 
+        ))
+
+    } else {
+      return this.props.data.filter(beast => beast.horns === this.state.horns).map((beast, idx) => (
       <HornedBeats
       buttonShowModal={this.props.buttonShowModal}
       setSelectedBeast= {this.props.setSelectedBeast} 
@@ -47,8 +59,11 @@ class Main extends React.Component {
       key={idx}
       beast={beast}
       /> 
-      ))}
-      </CardColumns>
+      ))
+    } 
+  }
+
+  render () {
 
     return(
       <>
@@ -58,7 +73,7 @@ class Main extends React.Component {
             <Form.Group>
               <Form.Label>How Many Horns</Form.Label>
               <Form.Control as="select" custom aria-label="Default select example" onChange={this.handleSubmit}>
-                <option value="">Filter By Horns</option>
+                <option value="0">Filter By Horns</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -67,7 +82,9 @@ class Main extends React.Component {
             </Form.Group>
           </Form>
         </Container>
-        {beastsToRender}
+        <CardColumns>
+        {this.renderBeast()}
+        </CardColumns>
       </>
     )
   }
