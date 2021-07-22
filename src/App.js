@@ -48,7 +48,9 @@ class App extends React.Component {
     return(
       <>
       <Header />
-      <SelectedBeast  
+      <SelectedBeast 
+      setSelectedBeast={this.setSelectedBeast}
+      data={data}
       buttonCloseModal={this.buttonCloseModal} 
       showModal2={this.state.showModal} 
       imageUrl={this.state.selectedBeast.imageUrl} 
