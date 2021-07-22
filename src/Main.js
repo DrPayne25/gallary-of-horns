@@ -53,6 +53,7 @@ class Main extends React.Component {
       <HornedBeats
       buttonShowModal={this.props.buttonShowModal}
       setSelectedBeast= {this.props.setSelectedBeast} 
+      showModal2 = {this.props.showModal2}
       subtractWalletProperty={this.subtractWallet}
       addWalletProperty={this.addWallet}
       horns={beast.horns}

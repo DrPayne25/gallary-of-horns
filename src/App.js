@@ -53,7 +53,8 @@ class App extends React.Component {
       showModal2={this.state.showModal} 
       imageUrl={this.state.selectedBeast.imageUrl} 
       description= {this.state.selectedBeast.description} 
-      title= {this.state.selectedBeast.title}/>
+      title= {this.state.selectedBeast.title}
+      buttonShowModal={this.buttonShowModal}/>
       <Main 
       data={data} 
       buttonShowModal={this.buttonShowModal} 

@@ -22,7 +22,7 @@ class HornedBeats extends React.Component {
   }
 
   setSelectedBeastHorned = () => {
-    this.props.setSelectedBeast(this.props.title, this.props.description, this.props.imageUrl)
+    this.props.setSelectedBeast(this.props.beast.title, this.props.beast.description, this.props.beast.image_url)
   }
 
   unFavorite = () => {
