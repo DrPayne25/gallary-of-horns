@@ -1,8 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react'
-import Header from './Header'
-import Footer from './Footer'
-import Main from './Main'
+import Header from './Header.js'
+import Footer from './Footer.js'
+import Main from './Main.js'
 import data from "./data.json"
 import './App.css';
 import SelectedBeast from './SelectedBeast';
@@ -55,7 +55,7 @@ class App extends React.Component {
       description= {this.state.selectedBeast.description} 
       title= {this.state.selectedBeast.title}/>
       <Main 
-      data= {data} 
+      data={data} 
       buttonShowModal={this.buttonShowModal} 
       showModal2={this.state.showModal} 
       setSelectedBeast={this.setSelectedBeast}/>
