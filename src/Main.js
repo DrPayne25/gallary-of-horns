@@ -10,7 +10,16 @@ class Main extends React.Component {
     super(props);
     this.state = {
       wallet: 200,
+      horns: 0,
     }
+  }
+
+  handleSubmit = e => {
+    e.preventDefault();
+    this.setState ({
+      horns:e.target.value,
+    })
+    console.log(e.target.value);
   }
 
   subtractWallet = () => {
@@ -26,7 +35,6 @@ class Main extends React.Component {
   }
 
   render () {
-
     let beastsToRender = 
     <CardColumns>
     {this.props.data.map((beast, idx) => (
@@ -35,6 +43,7 @@ class Main extends React.Component {
       setSelectedBeast= {this.props.setSelectedBeast} 
       subtractWalletProperty={this.subtractWallet}
       addWalletProperty={this.addWallet}
+      horns={beast.horns}
       key={idx}
       beast={beast}
       /> 
@@ -48,8 +57,12 @@ class Main extends React.Component {
           <Form id="hornsForm">
             <Form.Group>
               <Form.Label>How Many Horns</Form.Label>
-              <Form.Control as="select" custom aria-label="Default select example">
+              <Form.Control as="select" custom aria-label="Default select example" onChange={this.handleSubmit}>
                 <option value="">Filter By Horns</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="100">100</option>
               </Form.Control>
             </Form.Group>
           </Form>
