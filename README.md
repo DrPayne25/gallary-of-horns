@@ -56,6 +56,16 @@ Finish time: 5:19
 
 Actual time needed to complete: 3hrs 50min
 
+Number and name of feature: Feature 1 Filter
+
+Estimate of time needed to complete: 1hrs
+
+Start time: 6:30pm -- didn't  actually start at 6:30 yesterday but did have an hour of work from the previous day.
+
+Finish time: 9:30pm 
+
+Actual time needed to complete: 3hrs
+
 ### Links and Resources
 * [submission PR](http://xyz.com)
 * Any Links you used as reference
